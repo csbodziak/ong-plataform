@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastre-se como voluntùrio ou doador do Instituto Raùzes do Amanhù.">
+  <title>Cadastro de voluntùrios e doadores ù Instituto Raùzes do Amanhù</title>
+</head>
+<body>
+  <header>
+    <img src="../img/logo.svg" width="80" height="80" alt="Logotipo do Instituto Raùzes do Amanhù: folha verde sobre cùrculo bege">
+    <p>Instituto Raùzes do Amanhù</p>
+    <p>Seu cadastro fortalece a rede solidùria.</p>
+    <nav aria-label="Navegaùùo principal">
+      <ul>
+        <li><a href="index.html">Inùcio</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Cadastro de voluntùrios e doadores</h1>
+      <p>
+        Preencha o formulùrio com dados verdadeiros. Os campos marcados como obrigatùrios usam
+        validaùùo nativa do HTML5. CPF, telefone e CEP recebem mùscara automùtica durante a digitaùùo.
+      </p>
+      <img src="../img/voluntarios.svg" width="400" height="280" alt="Ilustraùùo de voluntùrios prontos para se cadastrar nas aùùes da ONG">
+    </section>
+
+    <section>
+      <h2>Formulùrio de engajamento</h2>
+      <form id="form-cadastro" action="cadastro.html" method="post">
+        <fieldset>
+          <legend>Dados pessoais</legend>
+          <p>
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" required minlength="5" maxlength="80" autocomplete="name" placeholder="Maria Souza da Silva">
+          </p>
+          <p>
+            <label for="nascimento">Data de nascimento</label>
+            <input type="date" id="nascimento" name="nascimento" required min="1920-01-01" max="2008-12-31">
+          </p>
+          <p>
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" required inputmode="numeric" autocomplete="off" maxlength="14" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Informe o CPF no formato 000.000.000-00">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contato e endereùo</legend>
+          <p>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required autocomplete="email" maxlength="80" placeholder="nome@email.com" title="Informe um e-mail vùlido">
+          </p>
+          <p>
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required inputmode="tel" autocomplete="tel" maxlength="15" placeholder="(11) 98765-4321" pattern="\(\d{2}\) \d{4,5}-\d{4}" title="Informe o telefone no formato (11) 98765-4321">
+          </p>
+          <p>
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" required inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000" pattern="\d{5}-\d{3}" title="Informe o CEP no formato 00000-000">
+          </p>
+          <p>
+            <label for="endereco">Logradouro</label>
+            <input type="text" id="endereco" name="endereco" required minlength="5" maxlength="100" autocomplete="address-line1" placeholder="Rua, nùmero e complemento">
+          </p>
+          <p>
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" required minlength="2" maxlength="60" autocomplete="address-level2" placeholder="Vila Esperanùa">
+          </p>
+          <p>
+            <label for="uf">UF</label>
+            <select id="uf" name="uf" required autocomplete="address-level1">
+              <option value="">Selecione</option>
+              <option value="SP" selected>SP</option>
+              <option value="RJ">RJ</option>
+              <option value="MG">MG</option>
+              <option value="PR">PR</option>
+              <option value="RS">RS</option>
+              <option value="BA">BA</option>
+              <option value="PE">PE</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="SC">SC</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tipo de apoio</legend>
+          <p>Escolha a forma principal de participaùùo:</p>
+          <p>
+            <input type="radio" id="tipo-voluntario" name="tipo_apoio" value="voluntario" required>
+            <label for="tipo-voluntario">Quero ser voluntùrio</label>
+          </p>
+          <p>
+            <input type="radio" id="tipo-doador" name="tipo_apoio" value="doador">
+            <label for="tipo-doador">Quero ser doador</label>
+          </p>
+          <p>
+            <label for="projeto">Projeto de interesse</label>
+            <select id="projeto" name="projeto" required>
+              <option value="">Selecione um projeto</option>
+              <option value="raizes-na-mesa">Raùzes na Mesa</option>
+              <option value="sala-aberta">Sala Aberta</option>
+              <option value="cuidar-em-rede">Cuidar em Rede</option>
+            </select>
+          </p>
+          <p>
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea id="mensagem" name="mensagem" rows="4" maxlength="400" placeholder="Conte como deseja contribuir."></textarea>
+          </p>
+          <p>
+            <input type="checkbox" id="termos" name="termos" value="aceito" required>
+            <label for="termos">Li e concordo com o uso dos meus dados para contato da ONG (texto fictùcio).</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Enviar cadastro</button>
+          <button type="reset">Limpar campos</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <aside>
+    <h2>Antes de enviar</h2>
+    <p>
+      Voluntùrios a partir de 18 anos podem atuar nas oficinas. Menores de idade nùo devem
+      preencher este formulùrio.
+    </p>
+    <h3>Dùvidas frequentes</h3>
+    <p>
+      Doaùùes em dinheiro nesta versùo acadùmica sùo apenas simuladas: nenhum pagamento real
+      ù processado.
+    </p>
+    <p><a href="projetos.html">Ver detalhes dos projetos</a></p>
+  </aside>
+
+  <footer>
+    <section>
+      <h2>Contato institucional</h2>
+      <address>
+        Instituto Raùzes do Amanhù<br>
+        Rua das Acùcias, 128 ù Vila Esperanùa ù SP<br>
+        Telefone: <a href="tel:+551133334444">(11) 3333-4444</a><br>
+        E-mail: <a href="mailto:cadastro@raizesdoamanha.org">cadastro@raizesdoamanha.org</a>
+      </address>
+    </section>
+    <p>
+      <small>
+        Conteùdo fictùcio elaborado para fins acadùmicos.
+        &copy; 2026 Instituto Raùzes do Amanhù.
+      </small>
+    </p>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      function somenteDigitos(valor) {
+        return valor.replace(/\D/g, "");
+      }
+
+      function mascaraCpf(valor) {
+        var d = somenteDigitos(valor).slice(0, 11);
+        d = d.replace(/(\d{3})(\d)/, "$1.$2");
+        d = d.replace(/(\d{3})(\d)/, "$1.$2");
+        d = d.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        return d;
+      }
+
+      function mascaraTelefone(valor) {
+        var d = somenteDigitos(valor).slice(0, 11);
+        if (d.length <= 10) {
+          d = d.replace(/(\d{2})(\d)/, "($1) $2");
+          d = d.replace(/(\d{4})(\d)/, "$1-$2");
+          return d;
+        }
+        d = d.replace(/(\d{2})(\d)/, "($1) $2");
+        d = d.replace(/(\d{5})(\d)/, "$1-$2");
+        return d;
+      }
+
+      function mascaraCep(valor) {
+        var d = somenteDigitos(valor).slice(0, 8);
+        d = d.replace(/(\d{5})(\d)/, "$1-$2");
+        return d;
+      }
+
+      function aplicarMascara(campo, formatar) {
+        campo.addEventListener("input", function () {
+          var inicio = campo.selectionStart;
+          var antes = campo.value.length;
+          campo.value = formatar(campo.value);
+          var depois = campo.value.length;
+          var posicao = inicio + (depois - antes);
+          campo.setSelectionRange(posicao, posicao);
+        });
+      }
+
+      var cpf = document.getElementById("cpf");
+      var telefone = document.getElementById("telefone");
+      var cep = document.getElementById("cep");
+
+      aplicarMascara(cpf, mascaraCpf);
+      aplicarMascara(telefone, mascaraTelefone);
+      aplicarMascara(cep, mascaraCep);
+    }());
+  </script>
+</body>
+</html>

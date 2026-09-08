@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="sedeTitle">
+  <title id="sedeTitle">Ilustração da sede comunitária da ONG</title>
+  <rect width="640" height="360" fill="#d7efe3"/>
+  <rect y="250" width="640" height="110" fill="#8fbc8f"/>
+  <rect x="140" y="120" width="360" height="170" fill="#f7f3e8"/>
+  <polygon points="120,120 320,40 520,120" fill="#c45c26"/>
+  <rect x="290" y="200" width="60" height="90" fill="#6b4f2a"/>
+  <rect x="180" y="150" width="70" height="50" fill="#7eb6d9"/>
+  <rect x="390" y="150" width="70" height="50" fill="#7eb6d9"/>
+</svg>

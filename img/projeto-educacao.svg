@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="eduTitle">
+  <title id="eduTitle">Livros e lápis ilustrando o projeto educacional</title>
+  <rect width="480" height="280" fill="#eaf4ff"/>
+  <rect x="90" y="90" width="140" height="110" fill="#1565c0"/>
+  <rect x="170" y="70" width="140" height="130" fill="#ef6c00"/>
+  <rect x="250" y="110" width="140" height="90" fill="#2e7d32"/>
+  <rect x="330" y="40" width="16" height="160" rx="4" fill="#fdd835"/>
+</svg>

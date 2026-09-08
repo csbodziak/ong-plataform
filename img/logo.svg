@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Logotipo do Instituto Raízes do Amanhã</title>
+  <circle cx="80" cy="80" r="76" fill="#1f6b4a"/>
+  <circle cx="80" cy="80" r="58" fill="#f4f1e8"/>
+  <path d="M80 118 C52 96 48 72 62 56 C70 46 80 52 80 62 C80 52 90 46 98 56 C112 72 108 96 80 118 Z" fill="#2e8b57"/>
+  <rect x="76" y="108" width="8" height="22" rx="2" fill="#6b4f2a"/>
+</svg>
